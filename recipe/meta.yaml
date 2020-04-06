@@ -1,17 +1,17 @@
 {% set name = "docxtpl" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c65f5142a03d52cd669e2cdcf34de6eed71c8440887bcaa1b7acf0352936198c
+  sha256: c377265ef01127d2dc9411779c592720cd97d971b458263cf02b7ace8b0c2e3f
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
 
 requirements:
