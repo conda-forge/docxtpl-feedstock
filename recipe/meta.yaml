@@ -1,5 +1,5 @@
 {% set name = "docxtpl" %}
-{% set version = "0.6.4" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c377265ef01127d2dc9411779c592720cd97d971b458263cf02b7ace8b0c2e3f
+  sha256: 216af2580b9f697c2f748faf06c0bfbf47a782f2dd10ad87824a4c5ecbd37008
 
 build:
   number: 0
