@@ -5,9 +5,13 @@ Home: https://github.com/elapouya/python-docx-template
 
 Package license: LGPL 2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/docxtpl-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python docx template engine
+
+Development: https://github.com/elapouya/python-docx-template
+
+Documentation: https://docxtpl.readthedocs.io/
 
 Use a MS Word docx document as a jinja2 template
 
