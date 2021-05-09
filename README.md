@@ -3,7 +3,7 @@ About docxtpl
 
 Home: https://github.com/elapouya/python-docx-template
 
-Package license: LGPL 2.1
+Package license: LGPL-2.1
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/docxtpl-feedstock/blob/master/LICENSE.txt)
 
@@ -43,6 +43,7 @@ Installing `docxtpl` from the `conda-forge` channel can be achieved by adding `c
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `docxtpl` can be installed with:
