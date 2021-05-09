@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://github.com/elapouya/python-docx-template
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: LICENSE.txt
   summary: Python docx template engine
