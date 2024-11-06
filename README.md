@@ -3,7 +3,7 @@ About docxtpl
 
 Home: https://github.com/elapouya/python-docx-template
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/docxtpl-feedstock/blob/master/LICENSE.txt)
 
