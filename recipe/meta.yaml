@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 60a8be7400fe9226fc52412cb7cd011064a40ac9984246f873dcf21f3c908377
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - jinja2
     - lxml
-    - python >=3.6
+    - python >={{ python_min }}
     - python-docx
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - docxtpl
 
