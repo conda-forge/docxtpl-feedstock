@@ -1,33 +1,41 @@
 {% set name = "docxtpl" %}
-{% set version = "0.11.5" %}
+{% set version = "0.19.0" %}
+{% set python_min = "3.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 60a8be7400fe9226fc52412cb7cd011064a40ac9984246f873dcf21f3c908377
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9cbacfe58ecf9eb481f28f60043c200f3e02205c0f41d710328e2558acbefba9
 
 build:
-  number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python {{ python_min }}
+    - poetry-core
     - pip
-    - python >=3.6
   run:
-    - jinja2
+    - python >={{ python_min }}
+    - python-docx >=1.1.2,<2.0.0
+    - docxcompose >=1.4.0,<2.0.0
+    - jinja2 >=3.1.4,<4.0.0
+    - black >=24.4.2,<25.0.0
     - lxml
-    - python >=3.6
-    - python-docx
-    - six
 
 test:
   imports:
     - docxtpl
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
   home: https://github.com/elapouya/python-docx-template
@@ -43,3 +51,4 @@ about:
 extra:
   recipe-maintainers:
     - jfcorbett
+    - YYYasin19
