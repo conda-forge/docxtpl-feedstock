@@ -1,6 +1,6 @@
 {% set name = "docxtpl" %}
-{% set version = "0.19.0" %}
-{% set python_min = "3.11" %}
+{% set version = "0.19.1" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9cbacfe58ecf9eb481f28f60043c200f3e02205c0f41d710328e2558acbefba9
+  sha256: 5836aab5583a82e2e81b086fae130ce94dc080f6b7fe0e43f83f4e3e3e5daecf
 
 build:
   noarch: python
@@ -25,7 +25,6 @@ requirements:
     - python-docx >=1.1.2,<2.0.0
     - docxcompose >=1.4.0,<2.0.0
     - jinja2 >=3.1.4,<4.0.0
-    - black >=24.4.2,<25.0.0
     - lxml
 
 test:
